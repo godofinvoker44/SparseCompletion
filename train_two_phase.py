@@ -171,8 +171,8 @@ if __name__ == "__main__":
         "max_objects": 4,
         "predict_height": True,
 
-        "epochs": 50,
-        "phase1_epochs": 25,          # 25 teacher, 25 GT
+        "epochs": 100,
+        "phase1_epochs": 50,          # 25 teacher, 25 GT
         "phase1_lr_mult": 10,         # One Cycle #1 max_lr = lr*10
         "phase2_lr_mult": 3,          # One Cycle #2 max_lr = lr*3 (finetune, lebih rendah)
         "phase2_teacher_fill": 0.0,   # Versi B: 0 = teacher mati di fase 2

@@ -69,10 +69,17 @@ def parse_ckpt_name(fname):
     name = fname
     if name.endswith(".pt"):
         name = name[:-3]
-    if name.startswith("train_"):
-        name = name[len("train_"):]
     if name.endswith("_last"):
         name = name[:-len("_last")]
+
+    # tandai skema training: train2p_ (dua fase) atau train_ (biasa)
+    two_phase = False
+    if name.startswith("train2p_"):
+        two_phase = True
+        name = name[len("train2p_"):]
+    elif name.startswith("train_"):
+        name = name[len("train_"):]
+
     encoder = None
     for enc in sorted(KNOWN_ENCODERS, key=len, reverse=True):
         if name.startswith(enc):
@@ -80,16 +87,21 @@ def parse_ckpt_name(fname):
             rest = name[len(enc):].lstrip("_")
             break
     if encoder is None:
-        return {"encoder": "unknown", "loss": "?", "teacher": "?", "weight": None}
+        return {"encoder": "unknown", "loss": "?", "teacher": "?",
+                "weight": None, "two_phase": two_phase}
+
     teacher = "no_teacher" not in rest
     rest = rest.replace("no_teacher", "").strip("_")
+
     weight = None
     m = re.search(r"w(\d+\.?\d*)", rest)
     if m:
         weight = float(m.group(1))
         rest = re.sub(r"w\d+\.?\d*", "", rest).strip("_")
+
     loss = rest.strip("_") if rest.strip("_") else "?"
-    return {"encoder": encoder, "loss": loss, "teacher": teacher, "weight": weight}
+    return {"encoder": encoder, "loss": loss, "teacher": teacher,
+            "weight": weight, "two_phase": two_phase}
 
 
 @torch.no_grad()
@@ -294,8 +306,10 @@ if __name__ == "__main__":
                 metrics = evaluate(cfg, verbose=False)
             except Exception as e:
                 print(f"  [error] {fname}: {str(e)[:60]}"); continue
+            
             rows.append({"encoder": info["encoder"], "loss": info["loss"],
-                         "teacher": info["teacher"], "weight": info["weight"], **metrics})
+                         "teacher": info["teacher"], "weight": info["weight"],
+                         "two_phase": info["two_phase"], **metrics})
             print(f"  done: {fname}  d1={metrics['delta1']:.3f} RMSE={metrics['RMSE']:.3f}")
 
         df = pd.DataFrame(rows)
