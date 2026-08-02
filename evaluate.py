@@ -14,9 +14,9 @@ KNOWN_ENCODERS = [
     "efficientnet_b0", 
     "efficientnet_b3", 
     "efficientnet_b5",
-    "mobilenetv4_conv_small", 
     "mobilenetv3_small_100", 
     "mobilenetv3_large_100",
+    "mobilenetv4_conv_small", 
     "regnety_002", 
     "regnetx_002", 
     "resnet10t", 
@@ -102,15 +102,14 @@ def compute_depth_metrics_zoned(pred, gt, mask, zones=ZONES, gmin=0.5, gmax=20.0
 @torch.no_grad()
 def evaluate(cfg, verbose=True):
     device = cfg["device"]
-    ds = CrossingDataset(cfg["csv_path"], "test", cfg["coco_json"],
-                            use_teacher=False, max_objects=cfg["max_objects"])
+    ds = CrossingDataset(cfg["csv_path"], "test", cfg["coco_json"], use_teacher=False, max_objects=cfg["max_objects"])
+
     if verbose:
         print(f"test: {len(ds)} sampel")
-    dl = DataLoader(ds, batch_size=cfg["batch_size"], shuffle=False,
-                    num_workers=cfg["num_workers"], collate_fn=collate_fn)
 
-    model = MultiTaskNet(encoder_name=cfg["encoder_name"], pretrained=False,
-                            max_objects=cfg["max_objects"]).to(device)
+    dl = DataLoader(ds, batch_size=cfg["batch_size"], shuffle=False, num_workers=cfg["num_workers"], collate_fn=collate_fn)
+
+    model = MultiTaskNet(encoder_name=cfg["encoder_name"], pretrained=False, max_objects=cfg["max_objects"]).to(device)
     state = torch.load(cfg["ckpt_path"], map_location=device, weights_only=False)
     model.load_state_dict(state, strict=False)
     model.eval()
@@ -200,7 +199,7 @@ def evaluate(cfg, verbose=True):
 
 
 if __name__ == "__main__":
-    MODE = "single"     # "single" = 1 model print; "multi" = semua model -> CSV
+    MODE = "multi"     # "single" = 1 model print; "multi" = semua model -> CSV
 
     if MODE == "single":
         decoder_name = "efficientnet_b0"

@@ -200,9 +200,9 @@ if __name__ == "__main__":
     # for loss in ["softdelta", "silog"]:
     loss = "softdelta"
     for name in [
-                'efficientnet_b0', 
-                # 'efficientnet_b3', 
-                # 'efficientnet_b5',
+                # 'efficientnet_b0', 
+                'efficientnet_b3', 
+                'efficientnet_b5',
                 # "mobilenetv4_conv_small",
                 # "mobilenetv3_small_100",  # Mobile standard
                 # "mobilenetv3_large_100",  # Mobile ultra-ringan
