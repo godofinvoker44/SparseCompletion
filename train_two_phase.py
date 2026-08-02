@@ -65,7 +65,7 @@ def depth_loss_phase(depth_fn, pred, batch, phase, w_teacher_fill=0.0):
 
 def train_two_phase(cfg):
     device = cfg["device"]
-    name = f"train2p_{cfg['encoder_name']}_{cfg['depth_loss_name']}"
+    name = f"train_v2_2p_{cfg['encoder_name']}_{cfg['depth_loss_name']}"
 
     ds = CrossingDataset(cfg["csv_path"], "train", cfg["coco_json"],
                             use_teacher=True, max_objects=cfg["max_objects"])   # butuh teacher di fase 1
@@ -163,7 +163,7 @@ def train_two_phase(cfg):
 
 if __name__ == "__main__":
     cfg = {
-        "csv_path": "dataset.csv",
+        "csv_path": "dataset_v2.csv",
         "coco_json": "new_ds/train/_annotations_coco.json",
         "encoder_name": "efficientnet_b0",
         "pretrained": True,
@@ -171,8 +171,8 @@ if __name__ == "__main__":
         "max_objects": 4,
         "predict_height": True,
 
-        "epochs": 100,
-        "phase1_epochs": 50,          # 25 teacher, 25 GT
+        "epochs": 50,
+        "phase1_epochs": 25,          # 25 teacher, 25 GT
         "phase1_lr_mult": 10,         # One Cycle #1 max_lr = lr*10
         "phase2_lr_mult": 3,          # One Cycle #2 max_lr = lr*3 (finetune, lebih rendah)
         "phase2_teacher_fill": 0.0,   # Versi B: 0 = teacher mati di fase 2

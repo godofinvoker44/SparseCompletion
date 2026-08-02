@@ -90,7 +90,7 @@ def visualize(cfg):
                    batch["obj_mask"][i].cpu(), W, H, "white", thresh=0.5)
         pred_scores = torch.sigmoid(out["objectness"][i]).cpu()
         draw_boxes(ax, out["bbox"][i].cpu(), out["keypoints_reg"][i].cpu(),
-                   pred_scores, W, H, "yellow", thresh=cfg["obj_thresh"], show_score=True)
+                   pred_scores, W, H, "lime", thresh=cfg["obj_thresh"], show_score=True)
         pl = LIGHT_NAMES[out["light"][i].argmax().item()]
         gl = LIGHT_NAMES[batch["light"][i].item()]
         ok = "OK" if pl == gl else "X"
@@ -131,20 +131,22 @@ def visualize(cfg):
 
 if __name__ == "__main__":
     decoder_name, loss = "efficientnet_b0", "softdelta"
-    use_teacher = "_w0.10" # "_no_teacher"
-    model_name = f"train_{decoder_name}_{loss}{use_teacher}_last"
+    use_teacher = "_w0.80" # "_no_teacher"
+    model_name = f"train_v2_{decoder_name}_{loss}{use_teacher}_last"
+    # model_name = "train2p_efficientnet_b0_softdelta_last"
+    # model_name = "train_v2_2p_efficientnet_b0_softdelta_last"
      
     cfg = {
-        "csv_path":   "dataset.csv",
+        "csv_path":   "dataset_v2.csv",
         "coco_json":  "new_ds/train/_annotations_coco.json",
         "ckpt_path":  f"checkpoints/{model_name}.pt",
         "encoder_name": decoder_name,
         "max_objects": 4,
         "use_teacher": True,          # True = tampilkan kolom teacher (jet)
         "n_samples": 5, 
-        "shuffle": True, 
+        "shuffle": False, 
         "obj_thresh": 0.3,
         "device": "cuda" if torch.cuda.is_available() else "cpu",
-        "save_path": "pred_viz.png",
+        "save_path": "",
     }
     visualize(cfg)

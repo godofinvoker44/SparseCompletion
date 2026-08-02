@@ -263,21 +263,23 @@ def evaluate(cfg, verbose=True):
 
 
 if __name__ == "__main__":
-    MODE = "multi"     # "single" = 1 model print; "multi" = semua model -> CSV
+    MODE = "single"     # "single" = 1 model print; "multi" = semua model -> CSV
 
     if MODE == "single":
         decoder_name = "efficientnet_b0"
         loss = "softdelta"
-        use_teacher = "_no_teacher"      # "" jika pakai teacher, atau mis. "_w0.10"
-        model_name = f"train_{decoder_name}_{loss}{use_teacher}_last"
+        use_teacher = "_w0.80" # ""_w0.10"" jika pakai teacher, atau mis. "_w0.10"
+        model_name = f"train_v2_{decoder_name}_{loss}{use_teacher}_last"
+        # model_name = "train2p_efficientnet_b0_softdelta_last"
+        # model_name = "train_v2_2p_efficientnet_b0_softdelta_last"
 
         print("model_name:", model_name)
         cfg = {
-            "csv_path":   "dataset.csv",
+            "csv_path":   "dataset_v2.csv",
             "coco_json":  "new_ds/train/_annotations_coco.json",
             "ckpt_path":  f"checkpoints/{model_name}.pt",
             "encoder_name": decoder_name,
-            "max_objects": 4, "batch_size": 16, "num_workers": 4,
+            "max_objects": 4, "batch_size": 1, "num_workers": 4,
             "device": "cuda" if torch.cuda.is_available() else "cpu",
         }
         evaluate(cfg, verbose=True)
@@ -299,7 +301,7 @@ if __name__ == "__main__":
                 "csv_path":   "dataset.csv",
                 "coco_json":  "new_ds/train/_annotations_coco.json",
                 "ckpt_path":  path, "encoder_name": info["encoder"],
-                "max_objects": 4, "batch_size": 16, "num_workers": 4,
+                "max_objects": 4, "batch_size": 1, "num_workers": 4,
                 "device": "cuda" if torch.cuda.is_available() else "cpu",
             }
             try:

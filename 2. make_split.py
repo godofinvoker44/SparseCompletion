@@ -138,8 +138,8 @@ if __name__ == "__main__":
         img_dir     = "new_ds/train",
         depth_dir   = "new_ds/Depth",
         coco_json   = "new_ds/train/_annotations_coco.json",
-        teacher_dir = "new_ds/Teacher",       # boleh kosong "" jika belum ada
-        out_csv     = "dataset.csv",
+        teacher_dir = "new_ds/Teacher2",       # boleh kosong "" jika belum ada
+        out_csv     = "dataset_v2.csv",
         test_ratio  = 0.2,
         seed        = 42,
     )

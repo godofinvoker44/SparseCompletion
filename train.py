@@ -78,7 +78,7 @@ def height_loss(out, batch):
 
 
 def train(cfg):
-    name = f"train_{cfg['encoder_name']}_{cfg['depth_loss_name']}"
+    name = f"train_v2_{cfg['encoder_name']}_{cfg['depth_loss_name']}"
     if cfg['use_teacher'] == False:
         name += "_no_teacher"
     else: 
@@ -200,7 +200,7 @@ if __name__ == "__main__":
     # for loss in ["softdelta", "silog"]:
     loss = "softdelta"
     for name in [
-                # 'efficientnet_b0', 
+                'efficientnet_b0', 
                 # 'efficientnet_b3', 
                 # 'efficientnet_b5',
                 # "mobilenetv4_conv_small",
@@ -208,12 +208,12 @@ if __name__ == "__main__":
                 # "mobilenetv3_large_100",  # Mobile ultra-ringan
                 # "regnety_002",            # Mobile NPU optimized
                 # "regnetx_002",            # Fast mobile (no SE)
-                "resnet10t",              # ResNet ultra-ringan
+                # "resnet10t",              # ResNet ultra-ringan
                 # "resnet18",               # General edge baseline
             ]:
         
         cfg = {
-            "csv_path":   "dataset.csv",
+            "csv_path":   "dataset_v2.csv",
             "coco_json":  "new_ds/train/_annotations_coco.json",
 
             "use_teacher": True,
@@ -235,7 +235,7 @@ if __name__ == "__main__":
             "ckpt_dir": "checkpoints",
 
             "teacher_fill_only": True,  
-            "w_teacher": 0.1,
+            "w_teacher": 0.8,
 
             "w_depth": 1.0, 
             "w_obj": 1.0,
