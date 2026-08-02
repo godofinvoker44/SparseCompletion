@@ -1,0 +1,16 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+kpt_shape: [6, 3]
+flip_idx: [0, 1, 2, 3, 4, 5]
+
+nc: 1
+names: ['Zebra-Crossing']
+
+roboflow:
+  workspace: my-workspace-about-research
+  project: zebra-crossing-annotation-ver-2
+  version: dataset
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/my-workspace-about-research/zebra-crossing-annotation-ver-2/dataset/dataset
