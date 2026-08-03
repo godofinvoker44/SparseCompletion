@@ -130,11 +130,11 @@ def visualize(cfg):
 
 
 if __name__ == "__main__":
-    decoder_name, loss = "efficientnet_b0", "softdelta"
-    use_teacher = "_w0.80" # "_no_teacher"
-    model_name = f"train_v2_{decoder_name}_{loss}{use_teacher}_last"
+    decoder_name, loss = "efficientnet_b5", "softdelta"
+    # use_teacher = "_w0.80" # "_no_teacher"
+    # model_name = f"train_v2_{decoder_name}_{loss}{use_teacher}_last"
     # model_name = "train2p_efficientnet_b0_softdelta_last"
-    # model_name = "train_v2_2p_efficientnet_b0_softdelta_last"
+    model_name = "train_teacheronly_efficientnet_b5_softdelta_last"
      
     cfg = {
         "csv_path":   "dataset_v2.csv",

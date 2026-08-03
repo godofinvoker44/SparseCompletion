@@ -72,11 +72,26 @@ def parse_ckpt_name(fname):
     if name.endswith("_last"):
         name = name[:-len("_last")]
 
-    # tandai skema training: train2p_ (dua fase) atau train_ (biasa)
+    version = "v1"
     two_phase = False
-    if name.startswith("train2p_"):
+    teacher_only = False
+
+    # detect prefixes, most-specific first
+    if name.startswith("train_v2_2p_"):
+        version = "v2"; two_phase = True
+        name = name[len("train_v2_2p_"):]
+    elif name.startswith("train_v2_"):
+        version = "v2"
+        name = name[len("train_v2_"):]
+    elif name.startswith("train2p_"):
         two_phase = True
         name = name[len("train2p_"):]
+    elif name.startswith("train_teacheronly_v2_"):
+        teacher_only = True; version = "v2"
+        name = name[len("train_teacheronly_v2_"):]
+    elif name.startswith("train_teacheronly_"):
+        teacher_only = True
+        name = name[len("train_teacheronly_"):]
     elif name.startswith("train_"):
         name = name[len("train_"):]
 
@@ -87,8 +102,9 @@ def parse_ckpt_name(fname):
             rest = name[len(enc):].lstrip("_")
             break
     if encoder is None:
-        return {"encoder": "unknown", "loss": "?", "teacher": "?",
-                "weight": None, "two_phase": two_phase}
+        return {"encoder": "unknown", "loss": "?", "teacher": "?", "weight": None,
+                "two_phase": two_phase, "teacher_only": teacher_only,
+                "version": version, "strategy": "unknown"}
 
     teacher = "no_teacher" not in rest
     rest = rest.replace("no_teacher", "").strip("_")
@@ -100,8 +116,22 @@ def parse_ckpt_name(fname):
         rest = re.sub(r"w\d+\.?\d*", "", rest).strip("_")
 
     loss = rest.strip("_") if rest.strip("_") else "?"
-    return {"encoder": encoder, "loss": loss, "teacher": teacher,
-            "weight": weight, "two_phase": two_phase}
+
+    if teacher_only:
+        teacher = True
+
+    if teacher_only:
+        strategy = "teacher_only"
+    elif two_phase:
+        strategy = "two_phase"
+    elif teacher:
+        strategy = "teacher_weighted"
+    else:
+        strategy = "no_teacher"
+
+    return {"encoder": encoder, "loss": loss, "teacher": teacher, "weight": weight,
+            "two_phase": two_phase, "teacher_only": teacher_only,
+            "version": version, "strategy": strategy}
 
 
 @torch.no_grad()
@@ -254,6 +284,7 @@ def evaluate(cfg, verbose=True):
             else:
                 for k in ["RMSE", "delta1", "delta2", "delta3", "AbsRel"]:
                     out[f"{zlabel}_{k}"] = float("nan")
+
         out["mean_iou"] = iou_sum / max(iou_n, 1)
         out["light_acc"] = light_correct / max(light_total, 1)
         out["kpt_dist"] = kpt_dist_sum / max(kpt_n, 1)
@@ -263,15 +294,15 @@ def evaluate(cfg, verbose=True):
 
 
 if __name__ == "__main__":
-    MODE = "single"     # "single" = 1 model print; "multi" = semua model -> CSV
+    MODE = "Multi"     # "single" = 1 model print; "multi" = semua model -> CSV
 
     if MODE == "single":
-        decoder_name = "efficientnet_b0"
+        decoder_name = "efficientnet_b5"
         loss = "softdelta"
-        use_teacher = "_w0.80" # ""_w0.10"" jika pakai teacher, atau mis. "_w0.10"
-        model_name = f"train_v2_{decoder_name}_{loss}{use_teacher}_last"
+        # use_teacher = "_w0.80" # ""_w0.10"" jika pakai teacher, atau mis. "_w0.10"
+        # model_name = f"train_v2_{decoder_name}_{loss}{use_teacher}_last"
         # model_name = "train2p_efficientnet_b0_softdelta_last"
-        # model_name = "train_v2_2p_efficientnet_b0_softdelta_last"
+        model_name = "train_teacheronly_efficientnet_b5_softdelta_last"
 
         print("model_name:", model_name)
         cfg = {
@@ -308,10 +339,13 @@ if __name__ == "__main__":
                 metrics = evaluate(cfg, verbose=False)
             except Exception as e:
                 print(f"  [error] {fname}: {str(e)[:60]}"); continue
-            
+
             rows.append({"encoder": info["encoder"], "loss": info["loss"],
                          "teacher": info["teacher"], "weight": info["weight"],
-                         "two_phase": info["two_phase"], **metrics})
+                         "two_phase": info["two_phase"], "teacher_only": info["teacher_only"],
+                         "version": info["version"], "strategy": info["strategy"],
+                         **metrics})
+            
             print(f"  done: {fname}  d1={metrics['delta1']:.3f} RMSE={metrics['RMSE']:.3f}")
 
         df = pd.DataFrame(rows)
