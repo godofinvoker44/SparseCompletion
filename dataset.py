@@ -28,6 +28,8 @@ from PIL import Image
 import torch
 from torch.utils.data import Dataset
 
+from kpt_order import canonicalize
+
 DEPTH_SCALE = 1.0 / 1000.0
 DEPTH_MIN, DEPTH_MAX = 0.001, 20.0
 IMG_SIZE = (512, 256)          # H, W
@@ -43,7 +45,11 @@ class CrossingDataset(Dataset):
     def __init__(self, csv_path, split, coco_json,
                     use_teacher=False, max_objects=4, img_size=IMG_SIZE,
                     depth_scale=DEPTH_SCALE, depth_min=0.001, depth_max=20.0,
-                    transform=None):
+                    transform=None, kpt_order="raw"):
+        # kpt_order: "raw"       = urutan keypoint apa adanya dari anotasi COCO
+        #            "canonical" = diurutkan ulang ke [TL, TR, BL, BR] (kpt_order.py)
+        assert kpt_order in ("raw", "canonical"), kpt_order
+        self.kpt_order = kpt_order
         self.use_teacher = use_teacher
         self.max_objects = max_objects
         self.img_size = img_size
@@ -126,8 +132,10 @@ class CrossingDataset(Dataset):
             x, y, w, h = a["bbox"]
             bbox[si] = torch.tensor([(x + w/2)/ow, (y + h/2)/oh, w/ow, h/oh], dtype=torch.float32)
             kp = a.get("keypoints", [])
-            for j in range(min(4, len(kp)//3)):
-                kx, ky, v = kp[3*j], kp[3*j+1], kp[3*j+2]
+            kp = [kp[3*j:3*j+3] for j in range(min(4, len(kp)//3))]
+            if self.kpt_order == "canonical":
+                kp = canonicalize(kp)
+            for j, (kx, ky, v) in enumerate(kp):
                 kpts[si, j, 0] = kx/ow; kpts[si, j, 1] = ky/oh
                 kpts[si, j, 2] = 1.0 if v > 0 else 0.0
 

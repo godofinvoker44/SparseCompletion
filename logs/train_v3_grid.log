@@ -1,0 +1,232 @@
+
+=== v3_gt_raw_efficientnet_b0_softdelta ===
+train 3487 | val 541 | depth_source=gt | kpt_order=raw
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+ep 00 | loss 42.609 depth 42.609 || val d1 0.037 AbsRel 0.604 IoU 0.087 kpt_canon 125.4px spread 0.48 | 41s
+ep 01 | loss 34.854 depth 34.854 || val d1 0.101 AbsRel 0.525 IoU 0.085 kpt_canon 124.6px spread 0.48 | 36s
+ep 02 | loss 30.600 depth 30.600 || val d1 0.173 AbsRel 0.467 IoU 0.089 kpt_canon 126.8px spread 0.47 | 36s
+ep 03 | loss 27.175 depth 27.175 || val d1 0.312 AbsRel 0.368 IoU 0.080 kpt_canon 125.6px spread 0.58 | 36s
+ep 04 | loss 25.145 depth 25.145 || val d1 0.561 AbsRel 0.269 IoU 0.081 kpt_canon 125.8px spread 0.49 | 36s
+ep 05 | loss 28.122 depth 24.269 kpt 0.2187 iou 0.170 || val d1 0.560 AbsRel 0.276 IoU 0.209 kpt_canon 96.7px spread 1.30 | 37s
+ep 06 | loss 26.441 depth 23.743 kpt 0.1813 iou 0.210 || val d1 0.524 AbsRel 0.260 IoU 0.232 kpt_canon 91.5px spread 1.33 | 37s
+ep 07 | loss 26.024 depth 23.524 kpt 0.1602 iou 0.226 || val d1 0.646 AbsRel 0.239 IoU 0.242 kpt_canon 85.4px spread 1.55 | 37s
+ep 08 | loss 25.647 depth 23.328 kpt 0.1431 iou 0.233 || val d1 0.654 AbsRel 0.229 IoU 0.274 kpt_canon 76.7px spread 1.43 | 37s
+ep 09 | loss 25.317 depth 23.131 kpt 0.1305 iou 0.253 || val d1 0.620 AbsRel 0.252 IoU 0.274 kpt_canon 74.9px spread 1.50 | 37s
+ep 10 | loss 25.001 depth 22.893 kpt 0.1229 iou 0.270 || val d1 0.669 AbsRel 0.229 IoU 0.233 kpt_canon 81.0px spread 1.28 | 37s
+ep 11 | loss 24.513 depth 22.520 kpt 0.1175 iou 0.270 || val d1 0.644 AbsRel 0.234 IoU 0.277 kpt_canon 76.5px spread 1.35 | 37s
+ep 12 | loss 24.034 depth 22.176 kpt 0.1074 iou 0.285 || val d1 0.684 AbsRel 0.214 IoU 0.269 kpt_canon 74.1px spread 1.02 | 37s
+ep 13 | loss 23.524 depth 21.743 kpt 0.1023 iou 0.287 || val d1 0.705 AbsRel 0.210 IoU 0.286 kpt_canon 69.7px spread 1.28 | 37s
+ep 14 | loss 23.134 depth 21.471 kpt 0.0934 iou 0.311 || val d1 0.711 AbsRel 0.204 IoU 0.310 kpt_canon 68.5px spread 1.26 | 37s
+ep 15 | loss 22.871 depth 21.301 kpt 0.0893 iou 0.311 || val d1 0.615 AbsRel 0.246 IoU 0.279 kpt_canon 66.4px spread 1.16 | 37s
+ep 16 | loss 22.420 depth 20.918 kpt 0.0831 iou 0.321 || val d1 0.687 AbsRel 0.218 IoU 0.325 kpt_canon 64.5px spread 1.19 | 37s
+ep 17 | loss 21.892 depth 20.456 kpt 0.0791 iou 0.336 || val d1 0.737 AbsRel 0.190 IoU 0.309 kpt_canon 58.1px spread 1.17 | 37s
+ep 18 | loss 21.490 depth 20.147 kpt 0.0744 iou 0.352 || val d1 0.728 AbsRel 0.205 IoU 0.332 kpt_canon 59.1px spread 1.32 | 37s
+ep 19 | loss 21.016 depth 19.726 kpt 0.0716 iou 0.360 || val d1 0.758 AbsRel 0.187 IoU 0.353 kpt_canon 58.9px spread 1.17 | 37s
+ep 20 | loss 20.548 depth 19.306 kpt 0.0655 iou 0.374 || val d1 0.711 AbsRel 0.213 IoU 0.374 kpt_canon 55.7px spread 1.14 | 37s
+ep 21 | loss 20.205 depth 18.992 kpt 0.0648 iou 0.372 || val d1 0.733 AbsRel 0.190 IoU 0.363 kpt_canon 60.0px spread 1.16 | 37s
+ep 22 | loss 19.824 depth 18.631 kpt 0.0631 iou 0.376 || val d1 0.722 AbsRel 0.211 IoU 0.390 kpt_canon 54.5px spread 1.05 | 37s
+ep 23 | loss 19.393 depth 18.251 kpt 0.0593 iou 0.391 || val d1 0.742 AbsRel 0.197 IoU 0.376 kpt_canon 53.9px spread 1.08 | 37s
+ep 24 | loss 19.016 depth 17.909 kpt 0.0563 iou 0.403 || val d1 0.752 AbsRel 0.196 IoU 0.372 kpt_canon 54.2px spread 1.17 | 37s
+ep 25 | loss 18.756 depth 17.671 kpt 0.0555 iou 0.401 || val d1 0.766 AbsRel 0.186 IoU 0.353 kpt_canon 58.8px spread 1.13 | 37s
+ep 26 | loss 18.444 depth 17.403 kpt 0.0522 iou 0.414 || val d1 0.770 AbsRel 0.191 IoU 0.406 kpt_canon 53.1px spread 1.15 | 37s
+ep 27 | loss 18.098 depth 17.068 kpt 0.0512 iou 0.414 || val d1 0.763 AbsRel 0.177 IoU 0.375 kpt_canon 55.1px spread 1.10 | 37s
+ep 28 | loss 17.684 depth 16.711 kpt 0.0481 iou 0.433 || val d1 0.785 AbsRel 0.181 IoU 0.395 kpt_canon 53.3px spread 1.06 | 37s
+ep 29 | loss 17.375 depth 16.425 kpt 0.0456 iou 0.449 || val d1 0.776 AbsRel 0.177 IoU 0.419 kpt_canon 50.5px spread 1.12 | 37s
+ep 30 | loss 17.144 depth 16.215 kpt 0.0443 iou 0.451 || val d1 0.789 AbsRel 0.174 IoU 0.428 kpt_canon 50.3px spread 1.06 | 37s
+ep 31 | loss 16.847 depth 15.956 kpt 0.0432 iou 0.466 || val d1 0.792 AbsRel 0.177 IoU 0.428 kpt_canon 49.2px spread 1.08 | 37s
+ep 32 | loss 16.489 depth 15.652 kpt 0.0404 iou 0.488 || val d1 0.776 AbsRel 0.190 IoU 0.436 kpt_canon 48.6px spread 1.06 | 37s
+ep 33 | loss 16.243 depth 15.406 kpt 0.0400 iou 0.486 || val d1 0.787 AbsRel 0.173 IoU 0.437 kpt_canon 49.9px spread 1.04 | 37s
+ep 34 | loss 16.013 depth 15.211 kpt 0.0379 iou 0.501 || val d1 0.791 AbsRel 0.183 IoU 0.445 kpt_canon 52.5px spread 1.06 | 37s
+ep 35 | loss 15.733 depth 14.960 kpt 0.0364 iou 0.517 || val d1 0.800 AbsRel 0.172 IoU 0.448 kpt_canon 47.6px spread 1.08 | 37s
+ep 36 | loss 15.518 depth 14.758 kpt 0.0359 iou 0.519 || val d1 0.796 AbsRel 0.176 IoU 0.444 kpt_canon 50.6px spread 1.07 | 37s
+ep 37 | loss 15.271 depth 14.540 kpt 0.0338 iou 0.535 || val d1 0.796 AbsRel 0.177 IoU 0.422 kpt_canon 47.0px spread 1.06 | 37s
+ep 38 | loss 15.099 depth 14.391 kpt 0.0331 iou 0.545 || val d1 0.799 AbsRel 0.173 IoU 0.463 kpt_canon 47.2px spread 1.06 | 37s
+ep 39 | loss 14.855 depth 14.182 kpt 0.0309 iou 0.563 || val d1 0.796 AbsRel 0.181 IoU 0.451 kpt_canon 45.8px spread 1.04 | 37s
+ep 40 | loss 14.688 depth 14.036 kpt 0.0292 iou 0.571 || val d1 0.801 AbsRel 0.173 IoU 0.482 kpt_canon 47.3px spread 1.02 | 37s
+ep 41 | loss 14.524 depth 13.909 kpt 0.0278 iou 0.596 || val d1 0.798 AbsRel 0.176 IoU 0.481 kpt_canon 44.6px spread 1.02 | 37s
+ep 42 | loss 14.397 depth 13.793 kpt 0.0272 iou 0.604 || val d1 0.801 AbsRel 0.175 IoU 0.482 kpt_canon 45.0px spread 1.03 | 37s
+ep 43 | loss 14.270 depth 13.691 kpt 0.0268 iou 0.620 || val d1 0.804 AbsRel 0.174 IoU 0.489 kpt_canon 44.3px spread 1.03 | 37s
+ep 44 | loss 14.202 depth 13.639 kpt 0.0260 iou 0.628 || val d1 0.803 AbsRel 0.174 IoU 0.493 kpt_canon 44.7px spread 1.03 | 37s
+ep 45 | loss 14.087 depth 13.554 kpt 0.0250 iou 0.648 || val d1 0.804 AbsRel 0.173 IoU 0.494 kpt_canon 44.8px spread 1.04 | 37s
+ep 46 | loss 14.065 depth 13.540 kpt 0.0247 iou 0.653 || val d1 0.804 AbsRel 0.173 IoU 0.482 kpt_canon 44.8px spread 1.01 | 37s
+ep 47 | loss 14.037 depth 13.527 kpt 0.0243 iou 0.665 || val d1 0.805 AbsRel 0.173 IoU 0.492 kpt_canon 44.8px spread 1.01 | 37s
+ep 48 | loss 13.994 depth 13.486 kpt 0.0240 iou 0.665 || val d1 0.804 AbsRel 0.173 IoU 0.491 kpt_canon 44.5px spread 1.01 | 37s
+ep 49 | loss 14.012 depth 13.504 kpt 0.0242 iou 0.665 || val d1 0.805 AbsRel 0.173 IoU 0.490 kpt_canon 45.0px spread 1.04 | 37s
+name                                                  delta1         AbsRel           RMSE       mean_iou      light_acc  light_bal_acc     kpt_px_idx   kpt_px_canon      kpt_pck10     kpt_spread
+v3_gt_raw_efficientnet_b0_softdelta                   0.7697         0.2151         2.7933         0.4829         0.9578         0.7711        42.1969        41.7857         0.1868         0.9706
+
+=== v3_gt_canonical_efficientnet_b0_softdelta ===
+train 3487 | val 541 | depth_source=gt | kpt_order=canonical
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+ep 00 | loss 42.609 depth 42.609 || val d1 0.037 AbsRel 0.604 IoU 0.087 kpt_canon 125.4px spread 0.48 | 41s
+ep 01 | loss 34.852 depth 34.852 || val d1 0.102 AbsRel 0.524 IoU 0.085 kpt_canon 124.5px spread 0.48 | 36s
+ep 02 | loss 30.602 depth 30.602 || val d1 0.168 AbsRel 0.468 IoU 0.089 kpt_canon 126.6px spread 0.47 | 36s
+ep 03 | loss 27.133 depth 27.133 || val d1 0.365 AbsRel 0.344 IoU 0.086 kpt_canon 125.5px spread 0.48 | 36s
+ep 04 | loss 25.203 depth 25.203 || val d1 0.414 AbsRel 0.305 IoU 0.076 kpt_canon 125.7px spread 0.52 | 36s
+ep 05 | loss 28.359 depth 24.503 kpt 0.2058 iou 0.180 || val d1 0.586 AbsRel 0.265 IoU 0.219 kpt_canon 105.9px spread 1.96 | 37s
+ep 06 | loss 26.587 depth 23.835 kpt 0.1784 iou 0.218 || val d1 0.591 AbsRel 0.244 IoU 0.213 kpt_canon 97.2px spread 1.72 | 37s
+ep 07 | loss 26.155 depth 23.687 kpt 0.1548 iou 0.229 || val d1 0.614 AbsRel 0.228 IoU 0.185 kpt_canon 86.5px spread 1.54 | 37s
+ep 08 | loss 25.480 depth 23.209 kpt 0.1386 iou 0.242 || val d1 0.672 AbsRel 0.220 IoU 0.232 kpt_canon 80.6px spread 1.56 | 37s
+ep 09 | loss 25.125 depth 22.962 kpt 0.1298 iou 0.255 || val d1 0.686 AbsRel 0.214 IoU 0.270 kpt_canon 77.4px spread 1.44 | 37s
+ep 10 | loss 24.715 depth 22.642 kpt 0.1220 iou 0.262 || val d1 0.657 AbsRel 0.238 IoU 0.228 kpt_canon 74.9px spread 1.44 | 37s
+ep 11 | loss 24.358 depth 22.445 kpt 0.1124 iou 0.283 || val d1 0.694 AbsRel 0.217 IoU 0.287 kpt_canon 72.9px spread 1.36 | 36s
+ep 12 | loss 24.020 depth 22.151 kpt 0.1096 iou 0.284 || val d1 0.631 AbsRel 0.252 IoU 0.262 kpt_canon 77.9px spread 1.41 | 37s
+ep 13 | loss 23.562 depth 21.797 kpt 0.1009 iou 0.289 || val d1 0.695 AbsRel 0.210 IoU 0.292 kpt_canon 70.0px spread 1.26 | 37s
+ep 14 | loss 23.267 depth 21.584 kpt 0.0929 iou 0.299 || val d1 0.697 AbsRel 0.211 IoU 0.264 kpt_canon 69.8px spread 1.15 | 37s
+ep 15 | loss 22.690 depth 21.134 kpt 0.0884 iou 0.320 || val d1 0.702 AbsRel 0.221 IoU 0.329 kpt_canon 61.3px spread 1.17 | 37s
+ep 16 | loss 22.008 depth 20.534 kpt 0.0818 iou 0.330 || val d1 0.756 AbsRel 0.187 IoU 0.317 kpt_canon 64.0px spread 1.21 | 37s
+ep 17 | loss 21.791 depth 20.355 kpt 0.0778 iou 0.342 || val d1 0.746 AbsRel 0.195 IoU 0.315 kpt_canon 60.3px spread 1.33 | 37s
+ep 18 | loss 21.505 depth 20.131 kpt 0.0756 iou 0.339 || val d1 0.678 AbsRel 0.237 IoU 0.334 kpt_canon 56.7px spread 1.22 | 37s
+ep 19 | loss 20.977 depth 19.654 kpt 0.0719 iou 0.351 || val d1 0.681 AbsRel 0.226 IoU 0.346 kpt_canon 58.2px spread 1.17 | 37s
+ep 20 | loss 20.628 depth 19.361 kpt 0.0686 iou 0.369 || val d1 0.668 AbsRel 0.231 IoU 0.341 kpt_canon 59.3px spread 1.14 | 39s
+ep 21 | loss 20.239 depth 18.995 kpt 0.0674 iou 0.368 || val d1 0.752 AbsRel 0.193 IoU 0.365 kpt_canon 58.1px spread 1.14 | 38s
+ep 22 | loss 19.778 depth 18.596 kpt 0.0623 iou 0.383 || val d1 0.714 AbsRel 0.214 IoU 0.372 kpt_canon 56.5px spread 1.32 | 37s
+ep 23 | loss 19.435 depth 18.270 kpt 0.0615 iou 0.387 || val d1 0.747 AbsRel 0.192 IoU 0.363 kpt_canon 57.4px spread 1.29 | 37s
+ep 24 | loss 19.017 depth 17.908 kpt 0.0580 iou 0.395 || val d1 0.751 AbsRel 0.196 IoU 0.374 kpt_canon 56.9px spread 1.15 | 37s
+ep 25 | loss 18.680 depth 17.609 kpt 0.0545 iou 0.410 || val d1 0.775 AbsRel 0.183 IoU 0.341 kpt_canon 52.3px spread 1.24 | 37s
+ep 26 | loss 18.374 depth 17.346 kpt 0.0512 iou 0.419 || val d1 0.791 AbsRel 0.173 IoU 0.383 kpt_canon 47.9px spread 1.23 | 37s
+ep 27 | loss 18.090 depth 17.066 kpt 0.0507 iou 0.419 || val d1 0.774 AbsRel 0.186 IoU 0.416 kpt_canon 51.0px spread 1.24 | 37s
+ep 28 | loss 17.674 depth 16.689 kpt 0.0495 iou 0.436 || val d1 0.747 AbsRel 0.187 IoU 0.413 kpt_canon 51.1px spread 1.25 | 37s
+ep 29 | loss 17.358 depth 16.401 kpt 0.0477 iou 0.443 || val d1 0.785 AbsRel 0.177 IoU 0.385 kpt_canon 50.7px spread 1.14 | 37s
+ep 30 | loss 17.088 depth 16.163 kpt 0.0451 iou 0.456 || val d1 0.793 AbsRel 0.172 IoU 0.429 kpt_canon 46.3px spread 1.18 | 37s
+ep 31 | loss 16.798 depth 15.888 kpt 0.0442 iou 0.458 || val d1 0.796 AbsRel 0.175 IoU 0.435 kpt_canon 45.6px spread 1.19 | 37s
+ep 32 | loss 16.504 depth 15.659 kpt 0.0410 iou 0.487 || val d1 0.786 AbsRel 0.184 IoU 0.432 kpt_canon 45.9px spread 1.11 | 37s
+ep 33 | loss 16.213 depth 15.374 kpt 0.0401 iou 0.483 || val d1 0.775 AbsRel 0.175 IoU 0.417 kpt_canon 45.7px spread 1.14 | 37s
+ep 34 | loss 15.977 depth 15.165 kpt 0.0381 iou 0.499 || val d1 0.788 AbsRel 0.183 IoU 0.410 kpt_canon 45.2px spread 1.16 | 37s
+ep 35 | loss 15.698 depth 14.910 kpt 0.0368 iou 0.505 || val d1 0.798 AbsRel 0.173 IoU 0.465 kpt_canon 42.0px spread 1.16 | 37s
+ep 36 | loss 15.482 depth 14.722 kpt 0.0352 iou 0.520 || val d1 0.793 AbsRel 0.177 IoU 0.454 kpt_canon 44.1px spread 1.14 | 37s
+ep 37 | loss 15.249 depth 14.514 kpt 0.0343 iou 0.532 || val d1 0.804 AbsRel 0.170 IoU 0.469 kpt_canon 43.2px spread 1.15 | 37s
+ep 38 | loss 15.067 depth 14.350 kpt 0.0327 iou 0.535 || val d1 0.794 AbsRel 0.174 IoU 0.468 kpt_canon 43.0px spread 1.14 | 37s
+ep 39 | loss 14.852 depth 14.160 kpt 0.0320 iou 0.550 || val d1 0.801 AbsRel 0.178 IoU 0.473 kpt_canon 42.3px spread 1.12 | 37s
+ep 40 | loss 14.677 depth 14.012 kpt 0.0301 iou 0.566 || val d1 0.801 AbsRel 0.173 IoU 0.470 kpt_canon 42.2px spread 1.15 | 38s
+ep 41 | loss 14.512 depth 13.888 kpt 0.0283 iou 0.588 || val d1 0.798 AbsRel 0.174 IoU 0.488 kpt_canon 42.0px spread 1.11 | 37s
+ep 42 | loss 14.375 depth 13.766 kpt 0.0272 iou 0.596 || val d1 0.801 AbsRel 0.172 IoU 0.471 kpt_canon 41.4px spread 1.12 | 37s
+ep 43 | loss 14.253 depth 13.662 kpt 0.0266 iou 0.609 || val d1 0.805 AbsRel 0.172 IoU 0.481 kpt_canon 41.3px spread 1.14 | 37s
+ep 44 | loss 14.185 depth 13.608 kpt 0.0261 iou 0.615 || val d1 0.802 AbsRel 0.173 IoU 0.492 kpt_canon 41.4px spread 1.15 | 37s
+ep 45 | loss 14.072 depth 13.527 kpt 0.0249 iou 0.637 || val d1 0.802 AbsRel 0.172 IoU 0.498 kpt_canon 41.6px spread 1.15 | 37s
+ep 46 | loss 14.045 depth 13.509 kpt 0.0244 iou 0.642 || val d1 0.803 AbsRel 0.171 IoU 0.488 kpt_canon 41.3px spread 1.13 | 37s
+ep 47 | loss 14.016 depth 13.500 kpt 0.0239 iou 0.657 || val d1 0.804 AbsRel 0.171 IoU 0.488 kpt_canon 41.1px spread 1.13 | 37s
+ep 48 | loss 13.975 depth 13.455 kpt 0.0240 iou 0.654 || val d1 0.803 AbsRel 0.171 IoU 0.486 kpt_canon 41.3px spread 1.11 | 37s
+ep 49 | loss 13.993 depth 13.473 kpt 0.0240 iou 0.654 || val d1 0.804 AbsRel 0.171 IoU 0.488 kpt_canon 41.3px spread 1.14 | 37s
+name                                                  delta1         AbsRel           RMSE       mean_iou      light_acc  light_bal_acc     kpt_px_idx   kpt_px_canon      kpt_pck10     kpt_spread
+v3_gt_canonical_efficientnet_b0_softdelta             0.7699         0.2113         2.7767         0.4848         0.9619         0.7658        39.6716        40.7754         0.2071         1.0630
+
+=== v3_pseudo_raw_efficientnet_b0_softdelta ===
+train 3487 | val 541 | depth_source=pseudo | kpt_order=raw
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+ep 00 | loss 24.780 depth 24.780 || val d1 0.005 AbsRel 0.712 IoU 0.090 kpt_canon 125.3px spread 0.44 | 42s
+ep 01 | loss 19.860 depth 19.860 || val d1 0.007 AbsRel 0.679 IoU 0.090 kpt_canon 125.4px spread 0.45 | 37s
+ep 02 | loss 17.001 depth 17.001 || val d1 0.013 AbsRel 0.629 IoU 0.086 kpt_canon 125.6px spread 0.43 | 36s
+ep 03 | loss 13.509 depth 13.509 || val d1 0.060 AbsRel 0.454 IoU 0.093 kpt_canon 127.3px spread 0.40 | 37s
+ep 04 | loss 9.320 depth 9.320 || val d1 0.210 AbsRel 0.350 IoU 0.084 kpt_canon 124.2px spread 0.47 | 36s
+ep 05 | loss 9.907 depth 6.192 kpt 0.2206 iou 0.185 || val d1 0.343 AbsRel 0.295 IoU 0.243 kpt_canon 98.5px spread 1.35 | 38s
+ep 06 | loss 7.403 depth 4.479 kpt 0.1966 iou 0.209 || val d1 0.650 AbsRel 0.229 IoU 0.192 kpt_canon 90.3px spread 1.45 | 38s
+ep 07 | loss 6.530 depth 3.974 kpt 0.1753 iou 0.238 || val d1 0.690 AbsRel 0.235 IoU 0.206 kpt_canon 92.2px spread 1.65 | 38s
+ep 08 | loss 6.256 depth 3.797 kpt 0.1594 iou 0.239 || val d1 0.708 AbsRel 0.221 IoU 0.258 kpt_canon 71.2px spread 1.01 | 37s
+ep 09 | loss 5.734 depth 3.544 kpt 0.1438 iou 0.272 || val d1 0.664 AbsRel 0.263 IoU 0.278 kpt_canon 71.9px spread 1.07 | 38s
+ep 10 | loss 5.593 depth 3.456 kpt 0.1321 iou 0.282 || val d1 0.585 AbsRel 0.262 IoU 0.187 kpt_canon 80.0px spread 1.59 | 38s
+ep 11 | loss 5.556 depth 3.510 kpt 0.1316 iou 0.298 || val d1 0.734 AbsRel 0.220 IoU 0.317 kpt_canon 62.9px spread 1.13 | 37s
+ep 12 | loss 5.075 depth 3.164 kpt 0.1213 iou 0.315 || val d1 0.739 AbsRel 0.207 IoU 0.303 kpt_canon 67.1px spread 0.96 | 38s
+ep 13 | loss 4.890 depth 3.048 kpt 0.1151 iou 0.308 || val d1 0.690 AbsRel 0.235 IoU 0.308 kpt_canon 73.9px spread 1.29 | 37s
+ep 14 | loss 5.167 depth 3.303 kpt 0.1188 iou 0.321 || val d1 0.717 AbsRel 0.225 IoU 0.311 kpt_canon 70.2px spread 1.51 | 38s
+ep 15 | loss 4.695 depth 2.985 kpt 0.1077 iou 0.341 || val d1 0.709 AbsRel 0.225 IoU 0.316 kpt_canon 71.3px spread 1.12 | 37s
+ep 16 | loss 4.550 depth 2.862 kpt 0.1031 iou 0.330 || val d1 0.731 AbsRel 0.227 IoU 0.331 kpt_canon 56.9px spread 1.00 | 38s
+ep 17 | loss 4.438 depth 2.809 kpt 0.0991 iou 0.342 || val d1 0.745 AbsRel 0.203 IoU 0.368 kpt_canon 56.2px spread 1.00 | 38s
+ep 18 | loss 4.202 depth 2.680 kpt 0.0929 iou 0.365 || val d1 0.738 AbsRel 0.198 IoU 0.358 kpt_canon 57.9px spread 1.22 | 38s
+ep 19 | loss 4.183 depth 2.677 kpt 0.0916 iou 0.367 || val d1 0.717 AbsRel 0.216 IoU 0.397 kpt_canon 57.5px spread 1.02 | 38s
+ep 20 | loss 4.153 depth 2.686 kpt 0.0905 iou 0.374 || val d1 0.715 AbsRel 0.231 IoU 0.379 kpt_canon 56.8px spread 1.09 | 37s
+ep 21 | loss 4.141 depth 2.658 kpt 0.0900 iou 0.362 || val d1 0.724 AbsRel 0.208 IoU 0.393 kpt_canon 57.2px spread 0.96 | 38s
+ep 22 | loss 3.942 depth 2.562 kpt 0.0821 iou 0.382 || val d1 0.742 AbsRel 0.206 IoU 0.392 kpt_canon 54.4px spread 0.95 | 37s
+ep 23 | loss 3.859 depth 2.522 kpt 0.0808 iou 0.393 || val d1 0.609 AbsRel 0.231 IoU 0.336 kpt_canon 61.4px spread 1.12 | 38s
+ep 24 | loss 3.728 depth 2.412 kpt 0.0779 iou 0.388 || val d1 0.736 AbsRel 0.211 IoU 0.430 kpt_canon 50.8px spread 1.00 | 39s
+ep 25 | loss 3.641 depth 2.409 kpt 0.0724 iou 0.410 || val d1 0.752 AbsRel 0.210 IoU 0.325 kpt_canon 52.2px spread 1.01 | 39s
+ep 26 | loss 3.449 depth 2.241 kpt 0.0718 iou 0.407 || val d1 0.728 AbsRel 0.217 IoU 0.402 kpt_canon 48.6px spread 1.07 | 38s
+ep 27 | loss 3.440 depth 2.281 kpt 0.0676 iou 0.425 || val d1 0.694 AbsRel 0.210 IoU 0.445 kpt_canon 53.9px spread 0.93 | 37s
+ep 28 | loss 3.450 depth 2.262 kpt 0.0698 iou 0.421 || val d1 0.740 AbsRel 0.216 IoU 0.438 kpt_canon 51.7px spread 0.95 | 38s
+ep 29 | loss 3.444 depth 2.271 kpt 0.0687 iou 0.428 || val d1 0.718 AbsRel 0.202 IoU 0.427 kpt_canon 54.2px spread 1.05 | 38s
+ep 30 | loss 3.280 depth 2.173 kpt 0.0639 iou 0.448 || val d1 0.711 AbsRel 0.206 IoU 0.469 kpt_canon 44.7px spread 1.06 | 37s
+ep 31 | loss 3.020 depth 1.992 kpt 0.0589 iou 0.456 || val d1 0.722 AbsRel 0.205 IoU 0.470 kpt_canon 45.0px spread 1.08 | 38s
+ep 32 | loss 2.866 depth 1.923 kpt 0.0538 iou 0.489 || val d1 0.724 AbsRel 0.210 IoU 0.474 kpt_canon 43.8px spread 1.02 | 37s
+ep 33 | loss 2.781 depth 1.857 kpt 0.0515 iou 0.489 || val d1 0.708 AbsRel 0.205 IoU 0.498 kpt_canon 44.8px spread 1.04 | 37s
+ep 34 | loss 2.701 depth 1.801 kpt 0.0502 iou 0.505 || val d1 0.753 AbsRel 0.205 IoU 0.478 kpt_canon 45.0px spread 1.01 | 38s
+ep 35 | loss 2.759 depth 1.900 kpt 0.0481 iou 0.521 || val d1 0.735 AbsRel 0.212 IoU 0.478 kpt_canon 49.0px spread 1.04 | 38s
+ep 36 | loss 2.587 depth 1.750 kpt 0.0462 iou 0.533 || val d1 0.743 AbsRel 0.204 IoU 0.508 kpt_canon 45.2px spread 0.98 | 37s
+ep 37 | loss 2.492 depth 1.695 kpt 0.0439 iou 0.548 || val d1 0.719 AbsRel 0.207 IoU 0.509 kpt_canon 43.0px spread 1.03 | 38s
+ep 38 | loss 2.432 depth 1.630 kpt 0.0433 iou 0.539 || val d1 0.734 AbsRel 0.211 IoU 0.472 kpt_canon 45.3px spread 1.06 | 38s
+ep 39 | loss 2.394 depth 1.614 kpt 0.0419 iou 0.558 || val d1 0.731 AbsRel 0.213 IoU 0.507 kpt_canon 41.6px spread 0.99 | 38s
+ep 40 | loss 2.260 depth 1.522 kpt 0.0393 iou 0.570 || val d1 0.737 AbsRel 0.208 IoU 0.515 kpt_canon 42.0px spread 1.03 | 38s
+ep 41 | loss 2.191 depth 1.490 kpt 0.0377 iou 0.589 || val d1 0.737 AbsRel 0.209 IoU 0.500 kpt_canon 40.4px spread 1.03 | 37s
+ep 42 | loss 2.162 depth 1.472 kpt 0.0375 iou 0.599 || val d1 0.732 AbsRel 0.210 IoU 0.521 kpt_canon 41.5px spread 1.02 | 37s
+ep 43 | loss 2.109 depth 1.441 kpt 0.0364 iou 0.612 || val d1 0.739 AbsRel 0.207 IoU 0.538 kpt_canon 41.2px spread 1.03 | 37s
+ep 44 | loss 2.070 depth 1.426 kpt 0.0349 iou 0.622 || val d1 0.732 AbsRel 0.207 IoU 0.533 kpt_canon 40.4px spread 1.03 | 37s
+ep 45 | loss 2.028 depth 1.410 kpt 0.0344 iou 0.640 || val d1 0.737 AbsRel 0.208 IoU 0.533 kpt_canon 40.7px spread 1.03 | 37s
+ep 46 | loss 2.011 depth 1.404 kpt 0.0336 iou 0.645 || val d1 0.729 AbsRel 0.208 IoU 0.534 kpt_canon 41.0px spread 1.02 | 37s
+ep 47 | loss 1.974 depth 1.387 kpt 0.0330 iou 0.658 || val d1 0.738 AbsRel 0.208 IoU 0.536 kpt_canon 40.8px spread 1.02 | 37s
+ep 48 | loss 1.979 depth 1.392 kpt 0.0330 iou 0.659 || val d1 0.735 AbsRel 0.207 IoU 0.532 kpt_canon 40.6px spread 1.00 | 38s
+ep 49 | loss 1.977 depth 1.386 kpt 0.0332 iou 0.657 || val d1 0.736 AbsRel 0.207 IoU 0.537 kpt_canon 40.6px spread 1.04 | 38s
+name                                                  delta1         AbsRel           RMSE       mean_iou      light_acc  light_bal_acc     kpt_px_idx   kpt_px_canon      kpt_pck10     kpt_spread
+v3_pseudo_raw_efficientnet_b0_softdelta               0.7045         0.2602         2.2626         0.5641         0.9681         0.8184        38.3054        39.3386         0.2630         1.0152
+
+=== v3_pseudo_canonical_efficientnet_b0_softdelta ===
+train 3487 | val 541 | depth_source=pseudo | kpt_order=canonical
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+ep 00 | loss 24.780 depth 24.780 || val d1 0.005 AbsRel 0.712 IoU 0.090 kpt_canon 125.3px spread 0.44 | 41s
+ep 01 | loss 19.860 depth 19.860 || val d1 0.007 AbsRel 0.680 IoU 0.090 kpt_canon 125.4px spread 0.45 | 36s
+ep 02 | loss 16.999 depth 16.999 || val d1 0.013 AbsRel 0.630 IoU 0.085 kpt_canon 125.6px spread 0.43 | 36s
+ep 03 | loss 13.509 depth 13.509 || val d1 0.061 AbsRel 0.457 IoU 0.090 kpt_canon 126.5px spread 0.43 | 36s
+ep 04 | loss 9.343 depth 9.343 || val d1 0.217 AbsRel 0.343 IoU 0.089 kpt_canon 126.2px spread 0.44 | 36s
+ep 05 | loss 9.605 depth 6.056 kpt 0.2006 iou 0.192 || val d1 0.635 AbsRel 0.227 IoU 0.165 kpt_canon 101.6px spread 1.90 | 37s
+ep 06 | loss 6.912 depth 4.286 kpt 0.1709 iou 0.236 || val d1 0.675 AbsRel 0.228 IoU 0.278 kpt_canon 85.5px spread 1.63 | 37s
+ep 07 | loss 6.208 depth 3.851 kpt 0.1512 iou 0.246 || val d1 0.632 AbsRel 0.245 IoU 0.234 kpt_canon 79.8px spread 1.43 | 37s
+ep 08 | loss 5.854 depth 3.634 kpt 0.1359 iou 0.257 || val d1 0.709 AbsRel 0.219 IoU 0.223 kpt_canon 71.6px spread 1.36 | 37s
+ep 09 | loss 5.194 depth 3.175 kpt 0.1193 iou 0.288 || val d1 0.627 AbsRel 0.266 IoU 0.174 kpt_canon 81.4px spread 1.40 | 37s
+ep 10 | loss 5.065 depth 3.143 kpt 0.1133 iou 0.298 || val d1 0.721 AbsRel 0.220 IoU 0.285 kpt_canon 65.8px spread 1.27 | 37s
+ep 11 | loss 4.832 depth 3.046 kpt 0.1085 iou 0.315 || val d1 0.748 AbsRel 0.218 IoU 0.339 kpt_canon 61.8px spread 1.12 | 37s
+ep 12 | loss 4.596 depth 2.861 kpt 0.1007 iou 0.322 || val d1 0.697 AbsRel 0.236 IoU 0.304 kpt_canon 68.1px spread 1.08 | 37s
+ep 13 | loss 4.475 depth 2.767 kpt 0.0989 iou 0.333 || val d1 0.738 AbsRel 0.205 IoU 0.361 kpt_canon 56.5px spread 1.24 | 37s
+ep 14 | loss 4.282 depth 2.666 kpt 0.0909 iou 0.341 || val d1 0.734 AbsRel 0.214 IoU 0.246 kpt_canon 56.9px spread 1.18 | 37s
+ep 15 | loss 4.144 depth 2.625 kpt 0.0884 iou 0.356 || val d1 0.754 AbsRel 0.213 IoU 0.358 kpt_canon 59.0px spread 1.13 | 38s
+ep 16 | loss 4.161 depth 2.675 kpt 0.0849 iou 0.355 || val d1 0.710 AbsRel 0.228 IoU 0.288 kpt_canon 61.5px spread 1.11 | 37s
+ep 17 | loss 4.049 depth 2.640 kpt 0.0814 iou 0.377 || val d1 0.758 AbsRel 0.196 IoU 0.305 kpt_canon 51.9px spread 1.22 | 37s
+ep 18 | loss 3.786 depth 2.463 kpt 0.0748 iou 0.391 || val d1 0.726 AbsRel 0.213 IoU 0.392 kpt_canon 52.7px spread 1.08 | 38s
+ep 19 | loss 3.727 depth 2.433 kpt 0.0731 iou 0.393 || val d1 0.715 AbsRel 0.216 IoU 0.373 kpt_canon 53.6px spread 1.08 | 37s
+ep 20 | loss 3.625 depth 2.395 kpt 0.0680 iou 0.405 || val d1 0.696 AbsRel 0.246 IoU 0.424 kpt_canon 49.2px spread 0.98 | 37s
+ep 21 | loss 3.683 depth 2.458 kpt 0.0674 iou 0.410 || val d1 0.737 AbsRel 0.201 IoU 0.389 kpt_canon 46.5px spread 1.15 | 37s
+ep 22 | loss 3.500 depth 2.345 kpt 0.0642 iou 0.423 || val d1 0.735 AbsRel 0.213 IoU 0.381 kpt_canon 54.4px spread 1.12 | 37s
+ep 23 | loss 3.568 depth 2.392 kpt 0.0640 iou 0.416 || val d1 0.692 AbsRel 0.215 IoU 0.421 kpt_canon 45.4px spread 1.15 | 37s
+ep 24 | loss 3.286 depth 2.200 kpt 0.0587 iou 0.436 || val d1 0.715 AbsRel 0.236 IoU 0.390 kpt_canon 46.2px spread 1.21 | 37s
+ep 25 | loss 3.331 depth 2.265 kpt 0.0569 iou 0.448 || val d1 0.740 AbsRel 0.218 IoU 0.330 kpt_canon 45.2px spread 1.04 | 37s
+ep 26 | loss 3.161 depth 2.116 kpt 0.0550 iou 0.457 || val d1 0.704 AbsRel 0.224 IoU 0.444 kpt_canon 48.4px spread 1.21 | 37s
+ep 27 | loss 3.159 depth 2.172 kpt 0.0535 iou 0.472 || val d1 0.724 AbsRel 0.215 IoU 0.445 kpt_canon 48.5px spread 1.15 | 37s
+ep 28 | loss 2.994 depth 2.036 kpt 0.0502 iou 0.482 || val d1 0.750 AbsRel 0.214 IoU 0.480 kpt_canon 41.3px spread 1.14 | 37s
+ep 29 | loss 2.804 depth 1.903 kpt 0.0477 iou 0.499 || val d1 0.727 AbsRel 0.199 IoU 0.480 kpt_canon 41.4px spread 1.19 | 37s
+ep 30 | loss 2.768 depth 1.879 kpt 0.0466 iou 0.511 || val d1 0.718 AbsRel 0.211 IoU 0.457 kpt_canon 41.7px spread 1.16 | 37s
+ep 31 | loss 2.684 depth 1.814 kpt 0.0447 iou 0.516 || val d1 0.729 AbsRel 0.207 IoU 0.441 kpt_canon 40.2px spread 1.14 | 37s
+ep 32 | loss 2.568 depth 1.746 kpt 0.0435 iou 0.537 || val d1 0.729 AbsRel 0.212 IoU 0.517 kpt_canon 38.5px spread 1.10 | 37s
+ep 33 | loss 2.438 depth 1.663 kpt 0.0400 iou 0.552 || val d1 0.698 AbsRel 0.212 IoU 0.511 kpt_canon 40.3px spread 1.07 | 38s
+ep 34 | loss 2.392 depth 1.639 kpt 0.0389 iou 0.562 || val d1 0.750 AbsRel 0.204 IoU 0.526 kpt_canon 36.8px spread 1.09 | 37s
+ep 35 | loss 2.345 depth 1.608 kpt 0.0380 iou 0.562 || val d1 0.751 AbsRel 0.204 IoU 0.510 kpt_canon 40.3px spread 1.07 | 37s
+ep 36 | loss 2.283 depth 1.589 kpt 0.0364 iou 0.592 || val d1 0.738 AbsRel 0.207 IoU 0.537 kpt_canon 39.5px spread 1.07 | 38s
+ep 37 | loss 2.246 depth 1.556 kpt 0.0347 iou 0.593 || val d1 0.731 AbsRel 0.211 IoU 0.523 kpt_canon 35.5px spread 1.10 | 37s
+ep 38 | loss 2.141 depth 1.488 kpt 0.0337 iou 0.607 || val d1 0.727 AbsRel 0.215 IoU 0.555 kpt_canon 36.5px spread 1.08 | 37s
+ep 39 | loss 2.078 depth 1.453 kpt 0.0324 iou 0.621 || val d1 0.730 AbsRel 0.211 IoU 0.540 kpt_canon 36.0px spread 1.08 | 37s
+ep 40 | loss 2.010 depth 1.421 kpt 0.0309 iou 0.645 || val d1 0.733 AbsRel 0.209 IoU 0.555 kpt_canon 36.3px spread 1.08 | 37s
+ep 41 | loss 1.965 depth 1.388 kpt 0.0307 iou 0.652 || val d1 0.734 AbsRel 0.213 IoU 0.566 kpt_canon 37.4px spread 1.06 | 38s
+ep 42 | loss 1.909 depth 1.358 kpt 0.0293 iou 0.671 || val d1 0.736 AbsRel 0.212 IoU 0.565 kpt_canon 35.5px spread 1.09 | 37s
+ep 43 | loss 1.878 depth 1.347 kpt 0.0288 iou 0.681 || val d1 0.741 AbsRel 0.209 IoU 0.571 kpt_canon 35.9px spread 1.06 | 37s
+ep 44 | loss 1.841 depth 1.329 kpt 0.0277 iou 0.692 || val d1 0.734 AbsRel 0.212 IoU 0.561 kpt_canon 35.9px spread 1.07 | 37s
+ep 45 | loss 1.799 depth 1.315 kpt 0.0272 iou 0.712 || val d1 0.738 AbsRel 0.211 IoU 0.577 kpt_canon 36.1px spread 1.06 | 37s
+ep 46 | loss 1.783 depth 1.308 kpt 0.0269 iou 0.718 || val d1 0.732 AbsRel 0.209 IoU 0.581 kpt_canon 35.8px spread 1.07 | 37s
+ep 47 | loss 1.752 depth 1.292 kpt 0.0264 iou 0.729 || val d1 0.736 AbsRel 0.210 IoU 0.582 kpt_canon 36.3px spread 1.07 | 37s
+ep 48 | loss 1.757 depth 1.297 kpt 0.0267 iou 0.729 || val d1 0.736 AbsRel 0.209 IoU 0.580 kpt_canon 35.8px spread 1.06 | 37s
+ep 49 | loss 1.744 depth 1.291 kpt 0.0262 iou 0.734 || val d1 0.736 AbsRel 0.210 IoU 0.583 kpt_canon 35.5px spread 1.07 | 38s
+name                                                  delta1         AbsRel           RMSE       mean_iou      light_acc  light_bal_acc     kpt_px_idx   kpt_px_canon      kpt_pck10     kpt_spread
+v3_pseudo_canonical_efficientnet_b0_softdelta         0.7064         0.2642         2.2663         0.5963         0.9640         0.7945        34.1492        35.2405         0.3204         1.0348
+
+=== HASIL TEST ===
+name                                                  delta1         AbsRel           RMSE       mean_iou      light_acc  light_bal_acc     kpt_px_idx   kpt_px_canon      kpt_pck10     kpt_spread
+v3_gt_raw_efficientnet_b0_softdelta                   0.7697         0.2151         2.7933         0.4829         0.9578         0.7711        42.1969        41.7857         0.1868         0.9706
+v3_gt_canonical_efficientnet_b0_softdelta             0.7699         0.2113         2.7767         0.4848         0.9619         0.7658        39.6716        40.7754         0.2071         1.0630
+v3_pseudo_raw_efficientnet_b0_softdelta               0.7045         0.2602         2.2626         0.5641         0.9681         0.8184        38.3054        39.3386         0.2630         1.0152
+v3_pseudo_canonical_efficientnet_b0_softdelta         0.7064         0.2642         2.2663         0.5963         0.9640         0.7945        34.1492        35.2405         0.3204         1.0348
+-> eval_results_v3.csv

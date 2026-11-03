@@ -1,0 +1,23 @@
+Fetching 1 files:   0%|          | 0/1 [00:00<?, ?it/s]Fetching 1 files: 100%|##########| 1/1 [00:00<?, ?it/s]
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+  0/5000  20260526_151542_120_000000  MAE vs GT = 0.955 m
+  250/5000  20260526_152412_160_000006  MAE vs GT = 1.043 m
+  500/5000  20260526_153228_130_000027  MAE vs GT = 0.579 m
+  750/5000  20260610_113856_160_000011  MAE vs GT = 1.707 m
+  1000/5000  20260709_090706_120_000000  MAE vs GT = 2.853 m
+  1250/5000  20260709_091917_150_000016  MAE vs GT = 1.153 m
+  1500/5000  20260709_093048_140_000007  MAE vs GT = 1.155 m
+  1750/5000  20260709_100107_120_000011  MAE vs GT = 1.518 m
+  2000/5000  20260709_101106_150_000012  MAE vs GT = 0.834 m
+  2250/5000  20260709_101933_150_000012  MAE vs GT = 0.931 m
+  2500/5000  20260709_181738_120_000008  MAE vs GT = 2.072 m
+  2750/5000  20260709_183132_130_000015  MAE vs GT = 0.821 m
+  3000/5000  20260710_091612_160_000013  MAE vs GT = 1.245 m
+  3250/5000  20260710_092530_120_000008  MAE vs GT = 1.721 m
+  3500/5000  20260715_085907_120_000012  MAE vs GT = 0.777 m
+  3750/5000  20260715_091235_130_000016  MAE vs GT = 0.892 m
+  4000/5000  20260715_092031_150_000013  MAE vs GT = 0.736 m
+  4250/5000  20260715_092727_150_000008  MAE vs GT = 1.144 m
+  4500/5000  20260715_094256_120_000014  MAE vs GT = 0.816 m
+  4750/5000  20260715_095022_140_000014  MAE vs GT = 0.578 m
+selesai: 5000 teacher | skip 0 | MAE kalibrasi rata-rata 1.278 m (median 1.171)
